@@ -2,14 +2,15 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.7.3
+  - python=3.8.*
   # https://www.anaconda.com/utilizing-the-new-compilers-in-anaconda-distribution-5/
-  - c-compiler=1.3.0
-  - cmake=3.21.3
-  - qt=5.12.5  # conda-forge does not have 5.13.2 available
+  - c-compiler=1.5.2
+  - cmake=3.25.2
+  - qt=5.15.6
   - pip
   - pip:
-    - gym3==0.3.3
-    - numpy==1.17.2
-    - gym==0.15.3
-    - filelock==3.0.10
+      - setuptools==65.5.0 # Required to install gym==0.21.0: https://github.com/openai/gym/issues/3176
+      - gym3==0.3.3
+      - numpy==1.24.2
+      - filelock==3.0.10
+      - gym==0.21.0
